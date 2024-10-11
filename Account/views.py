@@ -105,7 +105,7 @@ class incomingData(APIView):
                 return Response({"message":"requesed record not found"},  status=status.HTTP_404_NOT_FOUND)
             account = Account.objects.get(app_token=token)
 
-            ser_acc = AccountSerializer(account)
+           
             
             
             data ={
@@ -113,7 +113,7 @@ class incomingData(APIView):
                 "url":f"http://{request.META['SERVER_NAME']}:{request.META['SERVER_PORT']}",
                 "http_method":request.method,
                 "headers" : {
-                        "APP_ID": account.account_id,
+                        "APP_ID": secrets.token_hex(16),
                         "APP_SECTET": token,
                         "ACTION": f"user.{request.method}",
                         "Content-Type": "application/json",
@@ -125,6 +125,6 @@ class incomingData(APIView):
             return Response({"message":"destination addedd"},  status=status.HTTP_201_CREATED)
     def get(self, request):
         
-        return Response({"message":"asassa"},status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        return Response({"message":"invalid data"},status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 

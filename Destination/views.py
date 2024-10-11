@@ -57,15 +57,13 @@ class DestinationAccessByAccId(APIView):
 
 class getAllDestination(APIView):
     def get(self, request, account_id):
+        dest =  Destination.objects.filter(account_id=account_id)
+        
 
-        try:
-            dest = Destination.objects.get(account_id=account_id)
-        except dest.DoesNotExist:
-            return Response({"message":"requesed record not found"},  status=status.HTTP_404_NOT_FOUND)
-        dest = Destination.objects.get(account_id=account_id)
-
-        ser_des = DestinationSerializer(dest)
+        ser_des = DestinationSerializer(dest, many=True)
+        
         return Response(ser_des.data, status=status.HTTP_200_OK)
+        
 
 
 

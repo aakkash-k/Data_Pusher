@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "5a795ce1-b549-4722-a320-c37d99540b77",
+		"name": "Data Pusher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14687096"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Access by id",
+					"item": [
+						{
+							"name": "Update Account by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email_id\":\"selva@gmail.com\",\r\n    \"account_id\":\"334f4fef444\",\r\n    \"account_name\":\"selva\",\r\n    \"app_token\":\"aae982c684c6842de1936bdfd6e5968e\",\r\n    \"website\":\"http://selva.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Account by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Account by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"5"
+									]
+								},
+								"description": "When a account deleted associated destination also deleted"
+							},
+							"response": []
+						}
+					],
+					"description": "You can access all accounts in the database with the id(primary key)"
+				},
+				{
+					"name": "Access  by email id",
+					"item": [
+						{
+							"name": "Get Account  by email id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Update  Account by email id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email_id\":\"seva@gmail.com\",\r\n    \"account_id\":\"334f4fef444\",\r\n    \"account_name\":\"selva\",\r\n    \"app_token\":\"aae982c684c6842de1936bdfd6e5968e\",\r\n    \"website\":\"http://selva.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/selva@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"selva@gmail.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Account by email id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/seva@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"seva@gmail.com"
+									]
+								},
+								"description": "When a account deleted associated destination also deleted"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get All Accounts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Account",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destinations",
+			"item": [
+				{
+					"name": "Access by id",
+					"item": [
+						{
+							"name": "Get Destination by id",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Update Destination by id",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"account_id\": \"1234APPID1234\",\r\n    \"url\": \"http://kubernetes.docker.internal:8000\",\r\n    \"http_method\": \"POST\",\r\n    \"headers\": {\r\n        \"ACTION\": \"user.POST\",\r\n        \"APP_ID\": \"23234563dadsa2\",\r\n        \"Accept\": \"*\",\r\n        \"APP_SECTET\": \"a443abb1ef1c291efdbb34825e01ba01\",\r\n        \"Content-Type\": \"application/json\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/destination/api/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"destination",
+										"api",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Destination by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/destination/api/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"destination",
+										"api",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all Destinations",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/api",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all destionation for a Account by account id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Destination by account id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/server/incoming_data",
+			"item": [
+				{
+					"name": "/server/incoming_data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "CL-X-TOKEN",
+								"value": "cfabff1ca98f401d7744afc2defe4459",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/server/incoming_data",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"server",
+								"incoming_data"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Api accepts the **app_token** given in the header and finds the associated account from the accounts DB and sends a HTTP post request to the destination to add the account in the destination DB"
+		}
+	]
+}
