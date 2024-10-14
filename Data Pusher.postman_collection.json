@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5a795ce1-b549-4722-a320-c37d99540b77",
+		"_postman_id": "8454201f-b0c4-4c30-bf1d-917d0b6f6123",
 		"name": "Data Pusher",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14687096"
@@ -49,7 +49,23 @@
 							"name": "Get Account by id",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"1"
+									]
+								}
 							},
 							"response": []
 						},
@@ -88,7 +104,23 @@
 							"name": "Get Account  by email id",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/selva@gmail.com",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"selva@gmail.com"
+									]
+								}
 							},
 							"response": []
 						},
@@ -156,7 +188,22 @@
 					"name": "Get All Accounts",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/account/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"account",
+								"user"
+							]
+						}
 					},
 					"response": []
 				},
@@ -164,7 +211,31 @@
 					"name": "Add Account",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email_id\":\"selva@gmail.com\",\r\n    \"account_id\":\"ada45sdffdss\",\r\n    \"account_name\":\"selva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/account/user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"account",
+								"user"
+							]
+						}
 					},
 					"response": []
 				}
@@ -180,7 +251,23 @@
 							"name": "Get Destination by id",
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/account/user/8",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"account",
+										"user",
+										"8"
+									]
+								}
 							},
 							"response": []
 						},
@@ -247,7 +334,22 @@
 					"name": "Get all Destinations",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/ada45sdffdss",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"ada45sdffdss"
+							]
+						}
 					},
 					"response": []
 				},
@@ -278,15 +380,46 @@
 					"name": "Get all destionation for a Account by account id",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/api",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"api"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete a Destination by account id",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/api/ada45sdffdss",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"api",
+								"ada45sdffdss"
+							]
+						}
 					},
 					"response": []
 				}
@@ -302,7 +435,7 @@
 						"header": [
 							{
 								"key": "CL-X-TOKEN",
-								"value": "cfabff1ca98f401d7744afc2defe4459",
+								"value": "69ebef017f31f03f3bd8c68d42c38b13",
 								"type": "text"
 							}
 						],
